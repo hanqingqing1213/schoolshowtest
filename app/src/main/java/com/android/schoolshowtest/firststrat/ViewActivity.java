@@ -33,7 +33,7 @@ public class ViewActivity extends FragmentActivity {
         Fragment vivw1 = new View1();
         Fragment vivw2 = new Vivw2();
         Fragment vivw3 = new Vivw3();
-        fragments.add(vivw1);
+        fragments.add(vivw1);    //将一个Fragment的实例加到activity的container
         fragments.add(vivw2);
         fragments.add(vivw3);
         adapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
