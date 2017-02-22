@@ -18,7 +18,7 @@ import com.android.schoolshowtest.R;
 //判断程序是否第一次运行，如果是则跳转到Viewactivity，不是则跳转到mainactivity
 
 public class transtionActivity extends Activity {
-    boolean isFirstIn=false;
+    boolean isFirstIn;
     private Intent intent;
 
     @Override
@@ -36,7 +36,12 @@ public class transtionActivity extends Activity {
                 if (isFirstIn){
                     intent =new Intent(transtionActivity.this, ViewActivity.class);
                     transtionActivity.this.startActivity(intent);
+                    SharedPreferences.Editor editor=sharedPreferences.edit();
+                    editor.putBoolean("isFirstIn",false);
+                    editor.apply();
                     transtionActivity.this.finish();
+
+
 
 
                 } else {

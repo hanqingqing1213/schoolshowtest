@@ -39,12 +39,12 @@ public class ViewActivity extends FragmentActivity {
         adapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
-                return fragments.get(position);
+                return fragments.get(position);     //返回的是要显示的fragent对象
             }
 
             @Override
             public int getCount() {
-                return fragments.size();
+                return fragments.size();    //返回的是ViewPager页面的数量
             }
 
         };
